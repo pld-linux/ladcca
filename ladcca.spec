@@ -1,23 +1,24 @@
 Summary:	Linux Audio Developer's Configuration and Connection API
 Summary(pl):	Biblioteka LADCCA (Linux Audio Developer's Configuration and Connection API)
 Name:		ladcca
-Version:	0.3.1
-Release:	3
+Version:	0.4.0
+Release:	1
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://pkl.net/~node/software/%{name}-%{version}.tar.gz
-# Source0-md5: a3f0c1eab6c3dc852dca46e1e4c1a8f7
+# Source0-md5:	ffaff8a1ef560eb14bed3eb684ca4159
 Patch0:		%{name}-compile.patch
-Patch1:		%{name}-include.patch
 URL:		http://pkl.net/~node/ladcca.html/
-BuildRequires:	XFree86-devel
-BuildRequires:	alsa-lib-devel
-BuildRequires:	gtk+2-devel
-BuildRequires:	jack-audio-connection-kit-devel
+BuildRequires:	alsa-lib-devel >= 0.9
+BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
 BuildRequires:	libuuid-devel
+BuildRequires:	libxml2-devel >= 2.0.0
+BuildRequires:	pkgconfig
 BuildRequires:	readline-devel
 BuildRequires:	tetex
 Requires(post,postun):	/sbin/ldconfig
+Requires(post):	grep
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -57,10 +58,10 @@ Ten pakiet zawiera bibliotekê statyczn± LADCCA.
 %prep
 %setup -q
 %patch0 -p1
-%patch1 -p1
 
 %build
 %configure \
+	--disable-serv-inst \
 	--with-default-dir="~/audio_project"
 %{__make}
 
@@ -77,6 +78,10 @@ rm -rf $RPM_BUILD_ROOT
 /sbin/ldconfig
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
 
+if ! grep -q ^ladcca /etc/services; then
+	echo -e "\nladcca\t\t14541/tcp\t\t\t# LADCCA client/server protocol" >> /etc/services
+fi
+
 %postun
 /sbin/ldconfig
 [ ! -x /usr/sbin/fix-info-dir ] || /usr/sbin/fix-info-dir %{_infodir} >/dev/null 2>&1
@@ -86,6 +91,7 @@ rm -rf $RPM_BUILD_ROOT
 %doc AUTHORS ChangeLog NEWS README TODO
 %attr(755,root,root) %{_bindir}/ladcca*
 %attr(755,root,root) %{_libdir}/libladcca.so.*.*
+%{_datadir}/ladcca
 %{_infodir}/ladcca-manual*
 
 %files devel
