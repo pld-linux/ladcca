@@ -10,6 +10,7 @@ Source0:	http://pkl.net/~node/software/%{name}-%{version}.tar.gz
 Patch0:		%{name}-compile.patch
 URL:		http://pkl.net/~node/ladcca.html/
 BuildRequires:	alsa-lib-devel >= 0.9
+BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.0.0
 BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
 BuildRequires:	libuuid-devel
@@ -33,7 +34,7 @@ programów dla Linuksa.
 Summary:	Development files for LADCCA
 Summary(pl):	Pliki nag³ówkowe biblioteki LADCCA
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 Requires:	libuuid-devel
 Obsoletes:	ladcca-docs
 
@@ -47,7 +48,7 @@ Ten pakiet zawiera pliki nag³ówkowe biblioteki LADCCA.
 Summary:	Static LADCCA library
 Summary(pl):	Statyczna wersja biblioteki LADCCA
 Group:		Development/Libraries
-Requires:	%{name}-devel = %{version}
+Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains static LADCCA library.
@@ -60,6 +61,7 @@ Ten pakiet zawiera bibliotekê statyczn± LADCCA.
 %patch0 -p1
 
 %build
+cp /usr/share/automake/config.sub .
 %configure \
 	--disable-serv-inst
 %{__make}
