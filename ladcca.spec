@@ -10,6 +10,7 @@ Patch0:		%{name}-compile.patch
 URL:		http://pkl.net/~node/ladcca.html/
 BuildRequires:	XFree86-devel
 BuildRequires:	alsa-lib-devel
+BuildRequires:	e2fsprogs-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	jack-audio-connection-kit-devel
 BuildRequires:	readline-devel
@@ -30,6 +31,7 @@ Summary:	Development files for LADCCA
 Summary(pl):	Pliki nag³ówkowe biblioteki LADCCA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
+Requires:	e2fsprogs-devel
 Obsoletes:	ladcca-docs
 
 %description devel
