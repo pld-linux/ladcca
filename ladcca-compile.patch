@@ -1,0 +1,10 @@
+--- ladcca-0.3.0/clients/control/ladcca_control.c~	Fri Dec 20 11:54:42 2002
++++ ladcca-0.3.0/clients/control/ladcca_control.c	Tue Feb 11 15:19:34 2003
+@@ -29,6 +29,7 @@
+ 
+ #ifdef HAVE_LIBREADLINE
+ #  if defined(HAVE_READLINE_READLINE_H)
++#undef HAVE_CONFIG_H
+ #    include <readline/readline.h>
+ #  elif defined(HAVE_READLINE_H)
+ #    include <readline.h>
