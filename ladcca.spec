@@ -11,7 +11,7 @@ Patch0:		%{name}-compile.patch
 URL:		http://lash-audio-session-handler.org/
 BuildRequires:	alsa-lib-devel >= 0.9
 BuildRequires:	automake
-BuildRequires:	gtk+2-devel >= 2.0.0
+BuildRequires:	gtk+2-devel >= 1:2.0.0
 BuildRequires:	jack-audio-connection-kit-devel >= 0.50.0
 BuildRequires:	libuuid-devel
 BuildRequires:	libxml2-devel >= 2.0.0
