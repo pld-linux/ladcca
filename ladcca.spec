@@ -61,8 +61,7 @@ Ten pakiet zawiera bibliotekê statyczn± LADCCA.
 
 %build
 %configure \
-	--disable-serv-inst \
-	--with-default-dir="~/audio_project"
+	--disable-serv-inst
 %{__make}
 
 %install
