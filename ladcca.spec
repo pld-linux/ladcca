@@ -2,12 +2,13 @@ Summary:	Linux Audio Developer's Configuration and Connection API
 Summary(pl):	Biblioteka LADCCA (Linux Audio Developer's Configuration and Connection API)
 Name:		ladcca
 Version:	0.3.1
-Release:	2
+Release:	3
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://pkl.net/~node/software/%{name}-%{version}.tar.gz
 # Source0-md5: a3f0c1eab6c3dc852dca46e1e4c1a8f7
 Patch0:		%{name}-compile.patch
+Patch1:		%{name}-include.patch
 URL:		http://pkl.net/~node/ladcca.html/
 BuildRequires:	XFree86-devel
 BuildRequires:	alsa-lib-devel
@@ -56,6 +57,7 @@ Ten pakiet zawiera bibliotekê statyczn± LADCCA.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 %build
 %configure \
