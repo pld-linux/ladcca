@@ -6,6 +6,7 @@ Release:	1
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://pkl.net/~node/software/%{name}-%{version}.tar.gz
+# Source0-md5: a3f0c1eab6c3dc852dca46e1e4c1a8f7
 Patch0:		%{name}-compile.patch
 URL:		http://pkl.net/~node/ladcca.html/
 BuildRequires:	XFree86-devel
