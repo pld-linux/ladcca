@@ -27,7 +27,7 @@ LADCCA is a session management system for JACK and ALSA audio
 applications on Linux.
 
 %description -l pl
-LADCCA jest zarz±dc± sesji dla JACKa i ALSA oraz opartych o nie
+LADCCA jest zarz±dc± sesji dla JACK-a i ALSA oraz opartych o nie
 programów dla Linuksa.
 
 %package devel
