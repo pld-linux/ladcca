@@ -2,7 +2,7 @@ Summary:	Linux Audio Developer's Configuration and Connection API
 Summary(pl):	Biblioteka LADCCA (Linux Audio Developer's Configuration and Connection API)
 Name:		ladcca
 Version:	0.3.1
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://pkl.net/~node/software/%{name}-%{version}.tar.gz
@@ -11,9 +11,9 @@ Patch0:		%{name}-compile.patch
 URL:		http://pkl.net/~node/ladcca.html/
 BuildRequires:	XFree86-devel
 BuildRequires:	alsa-lib-devel
-BuildRequires:	e2fsprogs-devel
 BuildRequires:	gtk+2-devel
 BuildRequires:	jack-audio-connection-kit-devel
+BuildRequires:	libuuid-devel
 BuildRequires:	readline-devel
 BuildRequires:	tetex
 Requires(post,postun):	/sbin/ldconfig
@@ -32,7 +32,7 @@ Summary:	Development files for LADCCA
 Summary(pl):	Pliki nag³ówkowe biblioteki LADCCA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
-Requires:	e2fsprogs-devel
+Requires:	libuuid-devel
 Obsoletes:	ladcca-docs
 
 %description devel
@@ -65,7 +65,8 @@ Ten pakiet zawiera bibliotekê statyczn± LADCCA.
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
