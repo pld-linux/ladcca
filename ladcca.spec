@@ -5,10 +5,10 @@ Version:	0.4.0
 Release:	1
 License:	GPL
 Group:		Applications/Multimedia
-Source0:	http://pkl.net/~node/software/%{name}-%{version}.tar.gz
+Source0:	http://lash-audio-session-handler.org/download/%{name}-%{version}.tar.gz
 # Source0-md5:	ffaff8a1ef560eb14bed3eb684ca4159
 Patch0:		%{name}-compile.patch
-URL:		http://pkl.net/~node/ladcca.html/
+URL:		http://lash-audio-session-handler.org/
 BuildRequires:	alsa-lib-devel >= 0.9
 BuildRequires:	automake
 BuildRequires:	gtk+2-devel >= 2.0.0
