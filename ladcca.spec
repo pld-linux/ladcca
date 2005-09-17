@@ -2,7 +2,7 @@ Summary:	Linux Audio Developer's Configuration and Connection API
 Summary(pl):	Biblioteka LADCCA (Linux Audio Developer's Configuration and Connection API)
 Name:		ladcca
 Version:	0.4.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Applications/Multimedia
 Source0:	http://lash-audio-session-handler.org/download/%{name}-%{version}.tar.gz
