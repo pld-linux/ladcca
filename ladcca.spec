@@ -1,5 +1,5 @@
 Summary:	Linux Audio Developer's Configuration and Connection API
-Summary(pl):	Biblioteka LADCCA (Linux Audio Developer's Configuration and Connection API)
+Summary(pl.UTF-8):   Biblioteka LADCCA (Linux Audio Developer's Configuration and Connection API)
 Name:		ladcca
 Version:	0.4.0
 Release:	2
@@ -26,13 +26,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 LADCCA is a session management system for JACK and ALSA audio
 applications on Linux.
 
-%description -l pl
-LADCCA jest zarz±dc± sesji dla JACK-a i ALSA oraz opartych o nie
-programów dla Linuksa.
+%description -l pl.UTF-8
+LADCCA jest zarzÄ…dcÄ… sesji dla JACK-a i ALSA oraz opartych o nie
+programÃ³w dla Linuksa.
 
 %package devel
 Summary:	Development files for LADCCA
-Summary(pl):	Pliki nag³ówkowe biblioteki LADCCA
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki LADCCA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libuuid-devel
@@ -41,20 +41,20 @@ Obsoletes:	ladcca-docs
 %description devel
 This package contains header files for the LADCCA library.
 
-%description devel -l pl
-Ten pakiet zawiera pliki nag³ówkowe biblioteki LADCCA.
+%description devel -l pl.UTF-8
+Ten pakiet zawiera pliki nagÅ‚Ã³wkowe biblioteki LADCCA.
 
 %package static
 Summary:	Static LADCCA library
-Summary(pl):	Statyczna wersja biblioteki LADCCA
+Summary(pl.UTF-8):   Statyczna wersja biblioteki LADCCA
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
 %description static
 This package contains static LADCCA library.
 
-%description static -l pl
-Ten pakiet zawiera bibliotekê statyczn± LADCCA.
+%description static -l pl.UTF-8
+Ten pakiet zawiera bibliotekÄ™ statycznÄ… LADCCA.
 
 %prep
 %setup -q
