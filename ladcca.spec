@@ -1,5 +1,5 @@
 Summary:	Linux Audio Developer's Configuration and Connection API
-Summary(pl.UTF-8):   Biblioteka LADCCA (Linux Audio Developer's Configuration and Connection API)
+Summary(pl.UTF-8):	Biblioteka LADCCA (Linux Audio Developer's Configuration and Connection API)
 Name:		ladcca
 Version:	0.4.0
 Release:	2
@@ -32,7 +32,7 @@ programów dla Linuksa.
 
 %package devel
 Summary:	Development files for LADCCA
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki LADCCA
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki LADCCA
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	libuuid-devel
@@ -46,7 +46,7 @@ Ten pakiet zawiera pliki nagłówkowe biblioteki LADCCA.
 
 %package static
 Summary:	Static LADCCA library
-Summary(pl.UTF-8):   Statyczna wersja biblioteki LADCCA
+Summary(pl.UTF-8):	Statyczna wersja biblioteki LADCCA
 Group:		Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 
