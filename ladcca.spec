@@ -60,7 +60,7 @@ Ten pakiet zawiera bibliotekę statyczną LADCCA.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 cp /usr/share/automake/config.sub .
